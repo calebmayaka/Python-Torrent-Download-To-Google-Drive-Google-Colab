@@ -1,31 +1,40 @@
-Torrent Downloader using Google Colab
-This script facilitates downloading torrents directly to your Google Drive using Google Colab. It employs libtorrent to handle torrent downloads and requires minimal setup.
+# Torrent Downloader using Google Colab
 
-Getting Started
-Prerequisites
-Access to Google Colab (https://colab.research.google.com/)
-Google Drive storage for downloading torrents
-Basic understanding of using Colab notebooks
-Installation
-Mount Google Drive to the notebook environment by running the provided code block:
+This script facilitates downloading torrents directly to your Google Drive using Google Colab. It employs `libtorrent` to handle torrent downloads and requires minimal setup.
 
-python
-Copy code
-from google.colab import drive
-drive.mount('/content/drive')
-Install dependencies by executing the following commands:
+## Getting Started
 
-bash
-Copy code
-!python -m pip install --upgrade pip setuptools wheel
-!python -m pip install lbry-libtorrent
-Usage
-Execute the script in a Colab notebook environment.
-When prompted, paste the torrent/magnet link into the input field.
-The script will start downloading the torrent to the specified location in your Google Drive.
-Example
-python
-Copy code
+### Prerequisites
+
+- Access to Google Colab (https://colab.research.google.com/)
+- Google Drive storage for downloading torrents
+- Basic understanding of using Colab notebooks
+
+### Installation
+
+1. Mount Google Drive to the notebook environment by running the provided code block:
+
+    ```python
+    from google.colab import drive
+    drive.mount('/content/drive')
+    ```
+
+2. Install dependencies by executing the following commands:
+
+    ```bash
+    !python -m pip install --upgrade pip setuptools wheel
+    !python -m pip install lbry-libtorrent
+    ```
+
+## Usage
+
+1. Execute the script in a Colab notebook environment.
+2. When prompted, paste the torrent/magnet link into the input field.
+3. The script will start downloading the torrent to the specified location in your Google Drive.
+
+## Example
+
+```python
 # Mount Google Drive
 from google.colab import drive
 drive.mount('/content/drive')
@@ -75,6 +84,9 @@ print(handle.name(), "COMPLETE")
 print("Elapsed Time: ", int((end - begin) // 60), "min :", int((end - begin) % 60), "sec")
 
 print(datetime.datetime.now())
-Notes
-Make sure you have sufficient space in your Google Drive for downloading large files.
-This script runs in the Colab environment, so ensure continuous internet connectivity during the download process.
+```
+
+## Notes
+
+- Make sure you have sufficient space in your Google Drive for downloading large files.
+- This script runs in the Colab environment, so ensure continuous internet connectivity during the download process.
