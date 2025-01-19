@@ -1,4 +1,4 @@
-# Torrent Downloader using Google Colab
+# Torrent Downloader using Google Colab - Sail the high seas
 
 This script facilitates downloading torrents directly to your Google Drive using Google Colab. It employs `libtorrent` to handle torrent downloads and requires minimal setup.
 
